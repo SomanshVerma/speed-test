@@ -57,7 +57,7 @@ export function useSpeedTest() {
 
   const runDownloadTest = useCallback(
     async (signal: AbortSignal): Promise<number> => {
-      const response = await fetch('/api/download', {
+      const response = await fetch('https://speed.hetzner.de/100MB.bin', {
         cache: 'no-store',
         signal,
       });
